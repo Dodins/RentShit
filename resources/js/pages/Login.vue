@@ -1,5 +1,6 @@
-
-import { Link, useForm } from '@inertiajs/vue3';
+<script setup lang="ts">
+import { login } from '@/actions/App/Http/Controllers/AuthController';
+import { useForm } from '@inertiajs/vue3';
 import { ref } from 'vue';
 
 // If you are using Wayfinder, you can later swap route("login.store") with store()
@@ -82,7 +83,7 @@ const submit = () => {
 
             <p class="mt-6 text-center text-sm text-gray-600">
                 Don't have an account?
-                <Link :href="register.url()" class="font-medium text-blue-600 hover:underline"> Register </Link>
+                <Link :href="login.url()" class="font-medium text-blue-600 hover:underline"> Register </Link>
             </p>
         </div>
     </div>
