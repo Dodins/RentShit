@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { register } from '@/actions/App/Http/Controllers/AuthController';
-import { loginpage } from '@/routes';
+import { login } from '@/routes';
 import { Link, useForm } from '@inertiajs/vue3';
 import { ref } from 'vue';
 
@@ -118,7 +118,7 @@ const submit = () => {
             <!-- Login link -->
             <p class="mt-6 text-center text-sm text-gray-600">
                 Already have an account?
-                <Link :href="loginpage.url()" class="font-medium text-blue-600 hover:underline">Login</Link>
+                <Link :href="login.url()" class="font-medium text-blue-600 hover:underline">Login</Link>
             </p>
         </div>
     </div>
