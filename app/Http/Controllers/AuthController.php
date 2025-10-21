@@ -38,13 +38,14 @@ class AuthController extends Controller
             'password' => 'required|min:6',
         ]);
 
-        if(Auth::attempt($credentials)){
-             $request->session()->regenerate();
-             return redirect()->route('dashboard');
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            return redirect()->route('dashboard');
         }
 
         return back()->withErrors([
-            'message' => 'Invalid credentials provided'
+            'message' => 'Invalid credentials provided',
         ]);
     }
 }

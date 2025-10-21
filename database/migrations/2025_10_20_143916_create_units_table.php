@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string('unit_name');
             $table->string('tenant_name');
             $table->string('tenant_phone');
-            $table->decimal('water_rate', 8,2)->default(0);
-            $table->decimal('electric_rate', 8,2)->default(0);
-            $table->decimal('monthly_rent', 10,2)->default(0);
-            $table->enum('status',['active', 'inactive'])->default('active');
+            $table->decimal('water_rate', 8, 2)->default(0);
+            $table->decimal('electric_rate', 8, 2)->default(0);
+            $table->decimal('monthly_rent', 10, 2)->default(0);
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
     }

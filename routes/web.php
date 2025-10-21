@@ -4,20 +4,20 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-// Route::get('/', function () {
-//     return Inertia::render('Welcome');
-// })->name('home');
+// AUTHENTICATION
 
 Route::get('/', function () {
     return Inertia::render('Login');
-})->name('login');
+})->name('loginpage');
 
 Route::get('/register', function () {
     return Inertia::render('Register');
-})->name('register');
+})->name('registerpage');
 
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/register', [AuthController::class, 'register']);
+
+// DASHBOARD
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

@@ -15,4 +15,9 @@ class Unit extends Model
         'monthly_rent',
         'status',
     ];
+
+    public function monthly_summaries()
+    {
+        return $this->hasMany(MonthlySummary::class);
+    }
 }
